@@ -109,13 +109,6 @@ items:
           resources:
             limits:
               memory: 512Mi
-          volumeMounts:
-          - mountPath: /var/lib/mysql/data
-            name: mariadb-data
-        volumes:
-        - name: mariadb-data
-          persistentVolumeClaim:
-            claimName: mariadb
     triggers:
     - imageChangeParams:
         automatic: true
