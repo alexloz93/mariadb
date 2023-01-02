@@ -30,18 +30,6 @@ items:
       port: 3306
     selector:
       name: mariadb
-- apiVersion: v1
-  kind: PersistentVolumeClaim
-  metadata:
-    labels:
-      template: mariadb-persistent-template
-    name: mariadb
-  spec:
-    accessModes:
-    - ReadWriteOnce
-    resources:
-      requests:
-        storage: 1Gi
 - apiVersion: apps.openshift.io/v1
   kind: DeploymentConfig
   metadata:
